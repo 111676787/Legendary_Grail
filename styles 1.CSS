@@ -1,0 +1,132 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000000, #222222); /* Градиентный фон */
+    overflow: hidden; /* Скрываем полосы прокрутки */
+}
+
+#game-area {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#tap-button {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 520px;
+    background-image: url("boostCooldown\ =\ 0;.png"); /* Замените на кнопку */
+    background-size: cover;
+    cursor: pointer; 
+    transition: all 0.1s ease-out;
+}
+
+
+
+#energy-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    background-color: #ffffff; /* Синий цвет */
+    border-radius: 10px;
+}
+
+#energy-fill {
+    height: 100%;
+    background-color: #28a745; /* Зеленый цвет */
+    border-radius: 10px;
+    width: 100%; /* Заполняет весь бар по умолчанию */
+    transition: width 0.3s ease; /* Анимация изменения ширины */
+}
+
+#coins {
+    position: absolute;
+    top: 20px;left: 52%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+#result {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+}
+
+#boost-button {
+    position: absolute;
+    top: 450px;
+    right: 40px;
+    padding: 10px 28px;
+    background-color: #ffc107; /* Желтый цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: transform 0.1s ease; /* Добавляем плавный переход для анимации нажатия */
+}
+
+#boost-button:active {
+    transform: scale(0.95); /* При нажатии уменьшаем размер на 5% */
+}
+
+#boost-button.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+#quests-button {
+    position: absolute;
+    top: 450px;
+    right: 250px;
+    padding: 10px 28px;
+    background-color: #ffc107; /* Желтый цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: transform 0.1s ease; /* Добавляем плавный переход для анимации нажатия */
+}
+
+#quests-button:active {
+    transform: scale(0.95); /* При нажатии уменьшаем размер на 5% */
+}
+
+#quests-button.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+#achievement {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: white;
+}
+
+#achievement.active {
+    opacity: 1;
+}
